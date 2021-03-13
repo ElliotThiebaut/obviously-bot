@@ -7,7 +7,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('ready', () => {
-    console.log("🌈 Ready to roll 🌈");
+    console.log("🚀 Ready to roll 🚀");
 });
 
 client.on('message', async (msg) => {

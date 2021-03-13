@@ -2,10 +2,10 @@
   "name": "obviously-bot",
   "version": "0.0.1",
   "description": "A funny Discord bot",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
