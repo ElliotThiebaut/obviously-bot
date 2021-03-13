@@ -22,12 +22,14 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
-	const command = args.shift().toLowerCase();
+	const commandName = args.shift().toLowerCase();
 
-	if (!client.commands.has(command)) return;
+	if (!client.commands.has(commandName)) return;
+
+    const command = client.commands.get(commandName);
 
 	try {
-		client.commands.get(command).execute(client, message, args);
+		command.execute(client, message, args);
 	} catch (error) {
 		console.error(error);
 		message.reply('Il y a eu un problème lors de l\'éxécution de cette commande');
