@@ -2,12 +2,16 @@ const axios = require('axios');
 
 module.exports = {
 	name: 'gif',
-	description: 'Search for a gif on Tenor',
-	execute(smg, args) {
-		let keywords = 'risitas';
-        if (args.length > 0) {
-            keywords = args.join(" ");
-        }
+	description: 'Rechercher un gif sur Tenor',
+    args: true,
+    usage: '<mot-clé 1> <mot-clé 2> [...]',
+    guildOnly: false,
+    cooldown: 5,
+    aliases: ['giphy', 'tenor'],
+
+	async execute(message, args) {
+		let keywords = '';
+        keywords = args.join(" ");
 
         let url = `https://g.tenor.com/v1/search?q=${keywords}&key=${process.env.TENOR_KEY}&contentfilter=off`;
 
@@ -15,6 +19,6 @@ module.exports = {
         let data = response.data;
         let index = Math.floor(Math.random() * data.results.length)
 
-        msg.channel.send(data.results[index].url);
+        message.channel.send(data.results[index].url);
 	},
 };
