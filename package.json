@@ -1,0 +1,32 @@
+{
+  "name": "obviously-bot",
+  "version": "0.5.0",
+  "description": "A funny Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElliotThiebaut/obviously-bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "Node",
+    "JS",
+    "discord.js"
+  ],
+  "author": "Elliot Thiebaut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElliotThiebaut/obviously-bot/issues"
+  },
+  "homepage": "https://github.com/ElliotThiebaut/obviously-bot#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
