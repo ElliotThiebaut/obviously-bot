@@ -1,6 +1,6 @@
 {
   "name": "obviously-bot",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "A funny Discord bot",
   "main": "bot.js",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ElliotThiebaut/obviously-bot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.4.0",
     "axios": "^0.21.1",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
