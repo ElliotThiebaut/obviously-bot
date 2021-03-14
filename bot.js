@@ -20,12 +20,13 @@ for (const folder of commandFolders) {
 
 client.on('ready', () => {
     console.log("🚀 Ready to roll 🚀");
+
+    client.user.setActivity("Issou Gaming", {
+        type: "COMPETING",
+        url: "https://github.com/ElliotThiebaut/obviously-bot"
+    });
 });
 
-client.user.setActivity("with Risitas", {
-    type: "COMPETING",
-    url: "https://github.com/ElliotThiebaut/obviously-bot"
-});
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
